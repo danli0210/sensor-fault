@@ -48,3 +48,54 @@ python src/robustness.py
 ## Maintainer notes
 
 No user credentials, device serial numbers, private monitoring data, or GitHub tokens are included. This project is separate from embedded data-acquisition firmware.
+
+## Phase III.1 (v0.3.1): explicit compound hypotheses and open-set rejection
+
+**New:** [PHASE3_REPORT.md](PHASE3_REPORT.md) (Chinese study report). This is a fully
+synthetic feasibility/stress-test extension; it is **not** a validated new
+algorithm and does not establish journal novelty.
+
+Five evaluation truths: normal, process anomaly, sensor fault, simultaneous
+process+sensor causes, and unknown (unknown is not trained as a class).
+
+- `src/phase3.py` — four modeled classes, open-set unknown evaluation,
+  9-hypothesis marginal likelihood, BIC-penalized fitted-residual baseline,
+  separately calibrated confidence- and fit-based rejectors.
+- `src/phase3_summary_plots.py` — aggregate available-channel comparisons.
+- `tests/test_phase3.py` — posterior normalization, exact Gaussian likelihood
+  cross-check, unknown-channel blindness and calibration tests.
+- `results/phase3_2channels`, `results/phase3_3channels`, `results/phase3_all8`
+  — independent CSV/JSON outputs and plots for 2, 3, 8 observed channels.
+
+Reproduction:
+
+```bash
+python -m pip install -r requirements.txt
+python src/phase3.py --out results/phase3_2channels --cases-per-class 240 --seeds 4 --channels 0 1
+python src/phase3.py --out results/phase3_3channels --cases-per-class 240 --seeds 4 --channels 0 1 4
+python src/phase3.py --out results/phase3_all8 --cases-per-class 240 --seeds 4 --channels 0 1 2 3 4 5 6 7
+python src/phase3_summary_plots.py
+python -m unittest discover -s tests -v
+```
+
+Important: explicitly modeling compound events solves most matched, known
+compound cases; open-set rejection fails when the fault is outside observed
+channels, and a fixed noise covariance produces extreme false rejection under
+noise shift. These negative findings motivate Phase III.2.
+
+## Phase III.2 (v0.3.2): identifiability and pre-event noise-scale calibration
+
+Read **[PHASE32_REPORT.md](PHASE32_REPORT.md)** before interpreting results.
+
+- `src/phase32.py`: 24 independent random evaluation dynamical systems, plus 24 disjoint calibration systems; simple Gaussian pairwise distinguishability and Monte Carlo check; normal/known single/compound and two unknown event sources; fixed, pre-event RMS, pre-event robust median, and oracle rejection thresholds.
+- `tests/test_phase32.py`: mathematical invariants and Monte Carlo sanity checks.
+- `results/phase32/`: machine-readable per-system CSV, aggregate JSON, and three figures.
+
+Reproduce with:
+
+```bash
+python src/phase32.py --systems 24 --cases 80
+python -m unittest discover -s tests -v
+```
+
+**Limitations:** This new Phase III.2 is a deliberately *simpler*, fixed-amplitude known-mean benchmark than Phase III.1. It is not a replacement for the unknown-amplitude/onset-shift analysis. Under scalar stationary noise shift, simple pre-event scale estimation already largely solves the calibration problem; failure under abrupt shifts, untrusted baseline data and unobserved faults is the open issue. No GitHub Actions, field datasets or novel theoretical claims are implied.
