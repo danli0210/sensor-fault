@@ -1,0 +1,260 @@
+{
+  "design": {
+    "hypotheses": [
+      "process_A",
+      "process_B",
+      "sensor_fault_0",
+      "sensor_fault_1"
+    ],
+    "seeds": 8,
+    "cases_per_seed": 800,
+    "noise_sigma": 0.85,
+    "sensor_count": 8,
+    "always_observed": [
+      0,
+      1
+    ],
+    "additional_candidates": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "amplitude_prior": [
+      0.65,
+      1.35
+    ],
+    "waveform_length": 16,
+    "waveform_energy": 8.594806005625012,
+    "note": "All observations simulated; labels and Gaussian likelihood use the same specified model."
+  },
+  "results": [
+    {
+      "budget": 0.0,
+      "policy": "direct",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.0,
+      "policy": "fixed_extra",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.0,
+      "policy": "random_extra",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.0,
+      "policy": "active_extra",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.25,
+      "policy": "direct",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.25,
+      "policy": "fixed_extra",
+      "mean_accuracy": 0.62078,
+      "between_seed_95pct_CI": [
+        0.60754,
+        0.63402
+      ],
+      "mean_process_recall": 0.58248,
+      "mean_fault_recall": 0.65991
+    },
+    {
+      "budget": 0.25,
+      "policy": "random_extra",
+      "mean_accuracy": 0.61734,
+      "between_seed_95pct_CI": [
+        0.60161,
+        0.63308
+      ],
+      "mean_process_recall": 0.57632,
+      "mean_fault_recall": 0.65884
+    },
+    {
+      "budget": 0.25,
+      "policy": "active_extra",
+      "mean_accuracy": 0.66797,
+      "between_seed_95pct_CI": [
+        0.65544,
+        0.6805
+      ],
+      "mean_process_recall": 0.61226,
+      "mean_fault_recall": 0.72441
+    },
+    {
+      "budget": 0.5,
+      "policy": "direct",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.5,
+      "policy": "fixed_extra",
+      "mean_accuracy": 0.67766,
+      "between_seed_95pct_CI": [
+        0.66507,
+        0.69025
+      ],
+      "mean_process_recall": 0.64746,
+      "mean_fault_recall": 0.70811
+    },
+    {
+      "budget": 0.5,
+      "policy": "random_extra",
+      "mean_accuracy": 0.67219,
+      "between_seed_95pct_CI": [
+        0.65791,
+        0.68646
+      ],
+      "mean_process_recall": 0.63515,
+      "mean_fault_recall": 0.70934
+    },
+    {
+      "budget": 0.5,
+      "policy": "active_extra",
+      "mean_accuracy": 0.77359,
+      "between_seed_95pct_CI": [
+        0.76404,
+        0.78314
+      ],
+      "mean_process_recall": 0.72475,
+      "mean_fault_recall": 0.82251
+    },
+    {
+      "budget": 0.75,
+      "policy": "direct",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 0.75,
+      "policy": "fixed_extra",
+      "mean_accuracy": 0.725,
+      "between_seed_95pct_CI": [
+        0.71544,
+        0.73456
+      ],
+      "mean_process_recall": 0.70917,
+      "mean_fault_recall": 0.74127
+    },
+    {
+      "budget": 0.75,
+      "policy": "random_extra",
+      "mean_accuracy": 0.70672,
+      "between_seed_95pct_CI": [
+        0.69777,
+        0.71567
+      ],
+      "mean_process_recall": 0.68443,
+      "mean_fault_recall": 0.72944
+    },
+    {
+      "budget": 0.75,
+      "policy": "active_extra",
+      "mean_accuracy": 0.86641,
+      "between_seed_95pct_CI": [
+        0.85774,
+        0.87507
+      ],
+      "mean_process_recall": 0.83556,
+      "mean_fault_recall": 0.8975
+    },
+    {
+      "budget": 1.0,
+      "policy": "direct",
+      "mean_accuracy": 0.58125,
+      "between_seed_95pct_CI": [
+        0.5666,
+        0.5959
+      ],
+      "mean_process_recall": 0.57918,
+      "mean_fault_recall": 0.58384
+    },
+    {
+      "budget": 1.0,
+      "policy": "fixed_extra",
+      "mean_accuracy": 0.77531,
+      "between_seed_95pct_CI": [
+        0.76757,
+        0.78306
+      ],
+      "mean_process_recall": 0.77544,
+      "mean_fault_recall": 0.77548
+    },
+    {
+      "budget": 1.0,
+      "policy": "random_extra",
+      "mean_accuracy": 0.74297,
+      "between_seed_95pct_CI": [
+        0.73455,
+        0.75139
+      ],
+      "mean_process_recall": 0.73812,
+      "mean_fault_recall": 0.74829
+    },
+    {
+      "budget": 1.0,
+      "policy": "active_extra",
+      "mean_accuracy": 0.94844,
+      "between_seed_95pct_CI": [
+        0.94118,
+        0.9557
+      ],
+      "mean_process_recall": 0.94132,
+      "mean_fault_recall": 0.95551
+    }
+  ],
+  "alias_negative_control": {
+    "all_sensor_binary_accuracy": 0.50475,
+    "theoretical_maximum_under_equal_pair_priors": 0.5,
+    "note": "The process and fault hypotheses are identical for each pair; classification is unidentifiable."
+  }
+}

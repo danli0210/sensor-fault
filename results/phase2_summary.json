@@ -1,0 +1,1240 @@
+{
+  "design": {
+    "T": 14,
+    "states": 4,
+    "sensors": 8,
+    "initial_sensors": [
+      0,
+      1
+    ],
+    "additional_sensor_budget": 0.5,
+    "cases_per_regime": 2000,
+    "independent_replicates": 5,
+    "fixed_sensor_selected_on_training_only": 4,
+    "training_fixed_accuracy_by_sensor": {
+      "2": 0.997,
+      "3": 0.941,
+      "4": 0.998,
+      "5": 0.996,
+      "6": 0.997,
+      "7": 0.939
+    },
+    "note": "Synthetic linear dynamical model; Gaussian amplitude prior and exact stationary baseline covariance. All comparison methods use the same active-window selection budget."
+  },
+  "results": {
+    "matched": {
+      "all_eight_oracle": {
+        "accuracy": 1.0,
+        "accuracy_CI95": [
+          1.0,
+          1.0
+        ],
+        "macro_recall": 1.0,
+        "macro_recall_CI95": [
+          1.0,
+          1.0
+        ],
+        "high_confidence_wrong": 0.0,
+        "high_confidence_wrong_CI95": [
+          0.0,
+          0.0
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.9925,
+        "accuracy_CI95": [
+          0.98812,
+          0.99688
+        ],
+        "macro_recall": 0.99246,
+        "macro_recall_CI95": [
+          0.98803,
+          0.9969
+        ],
+        "high_confidence_wrong": 0.0075,
+        "high_confidence_wrong_CI95": [
+          0.00312,
+          0.01188
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ],
+        "conditional_risk_90": 0.0075,
+        "conditional_risk_90_CI95": [
+          0.00312,
+          0.01188
+        ]
+      },
+      "direct": {
+        "accuracy": 0.874,
+        "accuracy_CI95": [
+          0.86053,
+          0.88747
+        ],
+        "macro_recall": 0.87394,
+        "macro_recall_CI95": [
+          0.86039,
+          0.88749
+        ],
+        "high_confidence_wrong": 0.013,
+        "high_confidence_wrong_CI95": [
+          0.00618,
+          0.01982
+        ],
+        "coverage_90": 0.5725,
+        "coverage_90_CI95": [
+          0.54905,
+          0.59595
+        ],
+        "conditional_risk_90": 0.02305,
+        "conditional_risk_90_CI95": [
+          0.01068,
+          0.03543
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.9925,
+        "accuracy_CI95": [
+          0.98812,
+          0.99688
+        ],
+        "macro_recall": 0.99246,
+        "macro_recall_CI95": [
+          0.98803,
+          0.9969
+        ],
+        "high_confidence_wrong": 0.0075,
+        "high_confidence_wrong_CI95": [
+          0.00312,
+          0.01188
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ],
+        "conditional_risk_90": 0.0075,
+        "conditional_risk_90_CI95": [
+          0.00312,
+          0.01188
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.9905,
+        "accuracy_CI95": [
+          0.98628,
+          0.99472
+        ],
+        "macro_recall": 0.99048,
+        "macro_recall_CI95": [
+          0.98613,
+          0.99484
+        ],
+        "high_confidence_wrong": 0.0085,
+        "high_confidence_wrong_CI95": [
+          0.00396,
+          0.01304
+        ],
+        "coverage_90": 0.9975,
+        "coverage_90_CI95": [
+          0.99595,
+          0.99905
+        ],
+        "conditional_risk_90": 0.00852,
+        "conditional_risk_90_CI95": [
+          0.00396,
+          0.01308
+        ]
+      },
+      "random": {
+        "accuracy": 0.971,
+        "accuracy_CI95": [
+          0.96042,
+          0.98158
+        ],
+        "macro_recall": 0.97111,
+        "macro_recall_CI95": [
+          0.96043,
+          0.98179
+        ],
+        "high_confidence_wrong": 0.0105,
+        "high_confidence_wrong_CI95": [
+          0.00483,
+          0.01617
+        ],
+        "coverage_90": 0.9425,
+        "coverage_90_CI95": [
+          0.93475,
+          0.95025
+        ],
+        "conditional_risk_90": 0.01118,
+        "conditional_risk_90_CI95": [
+          0.00511,
+          0.01725
+        ]
+      }
+    },
+    "mismatch_mild": {
+      "all_eight_oracle": {
+        "accuracy": 1.0,
+        "accuracy_CI95": [
+          1.0,
+          1.0
+        ],
+        "macro_recall": 1.0,
+        "macro_recall_CI95": [
+          1.0,
+          1.0
+        ],
+        "high_confidence_wrong": 0.0,
+        "high_confidence_wrong_CI95": [
+          0.0,
+          0.0
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.993,
+        "accuracy_CI95": [
+          0.98519,
+          1.00081
+        ],
+        "macro_recall": 0.99302,
+        "macro_recall_CI95": [
+          0.98523,
+          1.00081
+        ],
+        "high_confidence_wrong": 0.0065,
+        "high_confidence_wrong_CI95": [
+          -0.00036,
+          0.01336
+        ],
+        "coverage_90": 0.9975,
+        "coverage_90_CI95": [
+          0.9926,
+          1.0024
+        ],
+        "conditional_risk_90": 0.00655,
+        "conditional_risk_90_CI95": [
+          -0.00041,
+          0.01351
+        ]
+      },
+      "direct": {
+        "accuracy": 0.867,
+        "accuracy_CI95": [
+          0.82515,
+          0.90885
+        ],
+        "macro_recall": 0.86684,
+        "macro_recall_CI95": [
+          0.82533,
+          0.90836
+        ],
+        "high_confidence_wrong": 0.0115,
+        "high_confidence_wrong_CI95": [
+          0.00558,
+          0.01742
+        ],
+        "coverage_90": 0.5755,
+        "coverage_90_CI95": [
+          0.52726,
+          0.62374
+        ],
+        "conditional_risk_90": 0.02074,
+        "conditional_risk_90_CI95": [
+          0.00849,
+          0.03298
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.993,
+        "accuracy_CI95": [
+          0.98519,
+          1.00081
+        ],
+        "macro_recall": 0.99302,
+        "macro_recall_CI95": [
+          0.98523,
+          1.00081
+        ],
+        "high_confidence_wrong": 0.0065,
+        "high_confidence_wrong_CI95": [
+          -0.00036,
+          0.01336
+        ],
+        "coverage_90": 0.9975,
+        "coverage_90_CI95": [
+          0.9926,
+          1.0024
+        ],
+        "conditional_risk_90": 0.00655,
+        "conditional_risk_90_CI95": [
+          -0.00041,
+          0.01351
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.992,
+        "accuracy_CI95": [
+          0.98227,
+          1.00173
+        ],
+        "macro_recall": 0.99202,
+        "macro_recall_CI95": [
+          0.98232,
+          1.00173
+        ],
+        "high_confidence_wrong": 0.007,
+        "high_confidence_wrong_CI95": [
+          -0.00081,
+          0.01481
+        ],
+        "coverage_90": 0.995,
+        "coverage_90_CI95": [
+          0.98986,
+          1.00014
+        ],
+        "conditional_risk_90": 0.00707,
+        "conditional_risk_90_CI95": [
+          -0.00087,
+          0.01501
+        ]
+      },
+      "random": {
+        "accuracy": 0.9725,
+        "accuracy_CI95": [
+          0.96282,
+          0.98218
+        ],
+        "macro_recall": 0.97254,
+        "macro_recall_CI95": [
+          0.96289,
+          0.98219
+        ],
+        "high_confidence_wrong": 0.0095,
+        "high_confidence_wrong_CI95": [
+          0.00304,
+          0.01596
+        ],
+        "coverage_90": 0.934,
+        "coverage_90_CI95": [
+          0.91093,
+          0.95707
+        ],
+        "conditional_risk_90": 0.01034,
+        "conditional_risk_90_CI95": [
+          0.00296,
+          0.01772
+        ]
+      }
+    },
+    "mismatch_strong": {
+      "all_eight_oracle": {
+        "accuracy": 1.0,
+        "accuracy_CI95": [
+          1.0,
+          1.0
+        ],
+        "macro_recall": 1.0,
+        "macro_recall_CI95": [
+          1.0,
+          1.0
+        ],
+        "high_confidence_wrong": 0.0,
+        "high_confidence_wrong_CI95": [
+          0.0,
+          0.0
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.9715,
+        "accuracy_CI95": [
+          0.92049,
+          1.02251
+        ],
+        "macro_recall": 0.97174,
+        "macro_recall_CI95": [
+          0.92111,
+          1.02236
+        ],
+        "high_confidence_wrong": 0.0165,
+        "high_confidence_wrong_CI95": [
+          -0.01103,
+          0.04403
+        ],
+        "coverage_90": 0.9695,
+        "coverage_90_CI95": [
+          0.90972,
+          1.02928
+        ],
+        "conditional_risk_90": 0.01911,
+        "conditional_risk_90_CI95": [
+          -0.01352,
+          0.05174
+        ]
+      },
+      "direct": {
+        "accuracy": 0.8425,
+        "accuracy_CI95": [
+          0.73808,
+          0.94692
+        ],
+        "macro_recall": 0.84249,
+        "macro_recall_CI95": [
+          0.73886,
+          0.94611
+        ],
+        "high_confidence_wrong": 0.022,
+        "high_confidence_wrong_CI95": [
+          -0.00315,
+          0.04715
+        ],
+        "coverage_90": 0.5805,
+        "coverage_90_CI95": [
+          0.43931,
+          0.72169
+        ],
+        "conditional_risk_90": 0.05373,
+        "conditional_risk_90_CI95": [
+          -0.0225,
+          0.12995
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.9715,
+        "accuracy_CI95": [
+          0.92049,
+          1.02251
+        ],
+        "macro_recall": 0.97174,
+        "macro_recall_CI95": [
+          0.92111,
+          1.02236
+        ],
+        "high_confidence_wrong": 0.0165,
+        "high_confidence_wrong_CI95": [
+          -0.01103,
+          0.04403
+        ],
+        "coverage_90": 0.9695,
+        "coverage_90_CI95": [
+          0.90972,
+          1.02928
+        ],
+        "conditional_risk_90": 0.01911,
+        "conditional_risk_90_CI95": [
+          -0.01352,
+          0.05174
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.9515,
+        "accuracy_CI95": [
+          0.86746,
+          1.03554
+        ],
+        "macro_recall": 0.95187,
+        "macro_recall_CI95": [
+          0.86854,
+          1.0352
+        ],
+        "high_confidence_wrong": 0.027,
+        "high_confidence_wrong_CI95": [
+          -0.01983,
+          0.07383
+        ],
+        "coverage_90": 0.9475,
+        "coverage_90_CI95": [
+          0.8592,
+          1.0358
+        ],
+        "conditional_risk_90": 0.03444,
+        "conditional_risk_90_CI95": [
+          -0.02692,
+          0.0958
+        ]
+      },
+      "random": {
+        "accuracy": 0.941,
+        "accuracy_CI95": [
+          0.87684,
+          1.00516
+        ],
+        "macro_recall": 0.94135,
+        "macro_recall_CI95": [
+          0.87763,
+          1.00507
+        ],
+        "high_confidence_wrong": 0.0245,
+        "high_confidence_wrong_CI95": [
+          -0.00552,
+          0.05452
+        ],
+        "coverage_90": 0.8945,
+        "coverage_90_CI95": [
+          0.80384,
+          0.98516
+        ],
+        "conditional_risk_90": 0.03185,
+        "conditional_risk_90_CI95": [
+          -0.01111,
+          0.0748
+        ]
+      }
+    },
+    "higher_noise": {
+      "all_eight_oracle": {
+        "accuracy": 1.0,
+        "accuracy_CI95": [
+          1.0,
+          1.0
+        ],
+        "macro_recall": 1.0,
+        "macro_recall_CI95": [
+          1.0,
+          1.0
+        ],
+        "high_confidence_wrong": 0.0,
+        "high_confidence_wrong_CI95": [
+          0.0,
+          0.0
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.9575,
+        "accuracy_CI95": [
+          0.94795,
+          0.96705
+        ],
+        "macro_recall": 0.9574,
+        "macro_recall_CI95": [
+          0.94785,
+          0.96694
+        ],
+        "high_confidence_wrong": 0.0425,
+        "high_confidence_wrong_CI95": [
+          0.03295,
+          0.05205
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ],
+        "conditional_risk_90": 0.0425,
+        "conditional_risk_90_CI95": [
+          0.03295,
+          0.05205
+        ]
+      },
+      "direct": {
+        "accuracy": 0.786,
+        "accuracy_CI95": [
+          0.76624,
+          0.80576
+        ],
+        "macro_recall": 0.786,
+        "macro_recall_CI95": [
+          0.76627,
+          0.80573
+        ],
+        "high_confidence_wrong": 0.069,
+        "high_confidence_wrong_CI95": [
+          0.06396,
+          0.07404
+        ],
+        "coverage_90": 0.6125,
+        "coverage_90_CI95": [
+          0.58905,
+          0.63595
+        ],
+        "conditional_risk_90": 0.1131,
+        "conditional_risk_90_CI95": [
+          0.10086,
+          0.12533
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.9575,
+        "accuracy_CI95": [
+          0.94795,
+          0.96705
+        ],
+        "macro_recall": 0.9574,
+        "macro_recall_CI95": [
+          0.94785,
+          0.96694
+        ],
+        "high_confidence_wrong": 0.0425,
+        "high_confidence_wrong_CI95": [
+          0.03295,
+          0.05205
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ],
+        "conditional_risk_90": 0.0425,
+        "conditional_risk_90_CI95": [
+          0.03295,
+          0.05205
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.9475,
+        "accuracy_CI95": [
+          0.94023,
+          0.95477
+        ],
+        "macro_recall": 0.94738,
+        "macro_recall_CI95": [
+          0.9401,
+          0.95465
+        ],
+        "high_confidence_wrong": 0.0475,
+        "high_confidence_wrong_CI95": [
+          0.0404,
+          0.0546
+        ],
+        "coverage_90": 0.986,
+        "coverage_90_CI95": [
+          0.98202,
+          0.98998
+        ],
+        "conditional_risk_90": 0.04818,
+        "conditional_risk_90_CI95": [
+          0.04096,
+          0.05539
+        ]
+      },
+      "random": {
+        "accuracy": 0.9225,
+        "accuracy_CI95": [
+          0.91246,
+          0.93254
+        ],
+        "macro_recall": 0.92235,
+        "macro_recall_CI95": [
+          0.91233,
+          0.93237
+        ],
+        "high_confidence_wrong": 0.057,
+        "high_confidence_wrong_CI95": [
+          0.04846,
+          0.06554
+        ],
+        "coverage_90": 0.9405,
+        "coverage_90_CI95": [
+          0.9261,
+          0.9549
+        ],
+        "conditional_risk_90": 0.06074,
+        "conditional_risk_90_CI95": [
+          0.05102,
+          0.07045
+        ]
+      }
+    },
+    "unknown_fault_shape": {
+      "all_eight_oracle": {
+        "accuracy": 1.0,
+        "accuracy_CI95": [
+          1.0,
+          1.0
+        ],
+        "macro_recall": 1.0,
+        "macro_recall_CI95": [
+          1.0,
+          1.0
+        ],
+        "high_confidence_wrong": 0.0,
+        "high_confidence_wrong_CI95": [
+          0.0,
+          0.0
+        ],
+        "coverage_90": 1.0,
+        "coverage_90_CI95": [
+          1.0,
+          1.0
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.985,
+        "accuracy_CI95": [
+          0.97843,
+          0.99157
+        ],
+        "macro_recall": 0.98494,
+        "macro_recall_CI95": [
+          0.97846,
+          0.99143
+        ],
+        "high_confidence_wrong": 0.0135,
+        "high_confidence_wrong_CI95": [
+          0.00682,
+          0.02018
+        ],
+        "coverage_90": 0.9795,
+        "coverage_90_CI95": [
+          0.96485,
+          0.99415
+        ],
+        "conditional_risk_90": 0.01379,
+        "conditional_risk_90_CI95": [
+          0.00694,
+          0.02064
+        ]
+      },
+      "direct": {
+        "accuracy": 0.844,
+        "accuracy_CI95": [
+          0.83062,
+          0.85738
+        ],
+        "macro_recall": 0.84351,
+        "macro_recall_CI95": [
+          0.82985,
+          0.85717
+        ],
+        "high_confidence_wrong": 0.0135,
+        "high_confidence_wrong_CI95": [
+          0.00682,
+          0.02018
+        ],
+        "coverage_90": 0.4805,
+        "coverage_90_CI95": [
+          0.46444,
+          0.49656
+        ],
+        "conditional_risk_90": 0.02814,
+        "conditional_risk_90_CI95": [
+          0.01405,
+          0.04223
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.985,
+        "accuracy_CI95": [
+          0.97843,
+          0.99157
+        ],
+        "macro_recall": 0.98494,
+        "macro_recall_CI95": [
+          0.97846,
+          0.99143
+        ],
+        "high_confidence_wrong": 0.0135,
+        "high_confidence_wrong_CI95": [
+          0.00682,
+          0.02018
+        ],
+        "coverage_90": 0.9795,
+        "coverage_90_CI95": [
+          0.96485,
+          0.99415
+        ],
+        "conditional_risk_90": 0.01379,
+        "conditional_risk_90_CI95": [
+          0.00694,
+          0.02064
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.9815,
+        "accuracy_CI95": [
+          0.97579,
+          0.98721
+        ],
+        "macro_recall": 0.98146,
+        "macro_recall_CI95": [
+          0.97571,
+          0.98721
+        ],
+        "high_confidence_wrong": 0.0155,
+        "high_confidence_wrong_CI95": [
+          0.00904,
+          0.02196
+        ],
+        "coverage_90": 0.9665,
+        "coverage_90_CI95": [
+          0.95285,
+          0.98015
+        ],
+        "conditional_risk_90": 0.01605,
+        "conditional_risk_90_CI95": [
+          0.00931,
+          0.02279
+        ]
+      },
+      "random": {
+        "accuracy": 0.957,
+        "accuracy_CI95": [
+          0.94486,
+          0.96914
+        ],
+        "macro_recall": 0.95701,
+        "macro_recall_CI95": [
+          0.94462,
+          0.96941
+        ],
+        "high_confidence_wrong": 0.017,
+        "high_confidence_wrong_CI95": [
+          0.00904,
+          0.02496
+        ],
+        "coverage_90": 0.9015,
+        "coverage_90_CI95": [
+          0.88455,
+          0.91845
+        ],
+        "conditional_risk_90": 0.01887,
+        "conditional_risk_90_CI95": [
+          0.01011,
+          0.02763
+        ]
+      }
+    },
+    "auxiliary_fault": {
+      "all_eight_oracle": {
+        "accuracy": 0.51,
+        "accuracy_CI95": [
+          0.48803,
+          0.53197
+        ],
+        "macro_recall": 0.50256,
+        "macro_recall_CI95": [
+          0.50103,
+          0.5041
+        ],
+        "high_confidence_wrong": 0.4875,
+        "high_confidence_wrong_CI95": [
+          0.46575,
+          0.50925
+        ],
+        "coverage_90": 0.9955,
+        "coverage_90_CI95": [
+          0.99367,
+          0.99733
+        ]
+      },
+      "class_aware": {
+        "accuracy": 0.6255,
+        "accuracy_CI95": [
+          0.60016,
+          0.65084
+        ],
+        "macro_recall": 0.6218,
+        "macro_recall_CI95": [
+          0.60797,
+          0.63564
+        ],
+        "high_confidence_wrong": 0.2525,
+        "high_confidence_wrong_CI95": [
+          0.23142,
+          0.27358
+        ],
+        "coverage_90": 0.5755,
+        "coverage_90_CI95": [
+          0.54612,
+          0.60488
+        ],
+        "conditional_risk_90": 0.43915,
+        "conditional_risk_90_CI95": [
+          0.40597,
+          0.47233
+        ]
+      },
+      "direct": {
+        "accuracy": 0.7555,
+        "accuracy_CI95": [
+          0.72979,
+          0.78121
+        ],
+        "macro_recall": 0.75451,
+        "macro_recall_CI95": [
+          0.7324,
+          0.77663
+        ],
+        "high_confidence_wrong": 0.007,
+        "high_confidence_wrong_CI95": [
+          0.00177,
+          0.01223
+        ],
+        "coverage_90": 0.2965,
+        "coverage_90_CI95": [
+          0.28285,
+          0.31015
+        ],
+        "conditional_risk_90": 0.0237,
+        "conditional_risk_90_CI95": [
+          0.00535,
+          0.04206
+        ]
+      },
+      "dispersion": {
+        "accuracy": 0.619,
+        "accuracy_CI95": [
+          0.59502,
+          0.64298
+        ],
+        "macro_recall": 0.61516,
+        "macro_recall_CI95": [
+          0.60317,
+          0.62715
+        ],
+        "high_confidence_wrong": 0.2575,
+        "high_confidence_wrong_CI95": [
+          0.23766,
+          0.27734
+        ],
+        "coverage_90": 0.5805,
+        "coverage_90_CI95": [
+          0.55263,
+          0.60837
+        ],
+        "conditional_risk_90": 0.44408,
+        "conditional_risk_90_CI95": [
+          0.41127,
+          0.4769
+        ]
+      },
+      "fixed_best": {
+        "accuracy": 0.7745,
+        "accuracy_CI95": [
+          0.75202,
+          0.79698
+        ],
+        "macro_recall": 0.77315,
+        "macro_recall_CI95": [
+          0.7547,
+          0.79161
+        ],
+        "high_confidence_wrong": 0.01,
+        "high_confidence_wrong_CI95": [
+          0.00441,
+          0.01559
+        ],
+        "coverage_90": 0.324,
+        "coverage_90_CI95": [
+          0.30027,
+          0.34773
+        ],
+        "conditional_risk_90": 0.03094,
+        "conditional_risk_90_CI95": [
+          0.01358,
+          0.04831
+        ]
+      },
+      "random": {
+        "accuracy": 0.7335,
+        "accuracy_CI95": [
+          0.71273,
+          0.75427
+        ],
+        "macro_recall": 0.73165,
+        "macro_recall_CI95": [
+          0.71807,
+          0.74523
+        ],
+        "high_confidence_wrong": 0.0925,
+        "high_confidence_wrong_CI95": [
+          0.0863,
+          0.0987
+        ],
+        "coverage_90": 0.4065,
+        "coverage_90_CI95": [
+          0.38092,
+          0.43208
+        ],
+        "conditional_risk_90": 0.22819,
+        "conditional_risk_90_CI95": [
+          0.2102,
+          0.24618
+        ]
+      }
+    },
+    "compound": {
+      "class_aware": {
+        "confident_single_source_rate": 0.971,
+        "confident_single_source_rate_CI95": [
+          0.96432,
+          0.97768
+        ],
+        "mean_posterior_confidence": 0.99249,
+        "mean_posterior_confidence_CI95": [
+          0.99082,
+          0.99416
+        ]
+      },
+      "direct": {
+        "confident_single_source_rate": 0.7845,
+        "confident_single_source_rate_CI95": [
+          0.77639,
+          0.79261
+        ],
+        "mean_posterior_confidence": 0.93328,
+        "mean_posterior_confidence_CI95": [
+          0.92941,
+          0.93716
+        ]
+      },
+      "dispersion": {
+        "confident_single_source_rate": 0.972,
+        "confident_single_source_rate_CI95": [
+          0.96778,
+          0.97622
+        ],
+        "mean_posterior_confidence": 0.99263,
+        "mean_posterior_confidence_CI95": [
+          0.99107,
+          0.99419
+        ]
+      },
+      "fixed_best": {
+        "confident_single_source_rate": 0.943,
+        "confident_single_source_rate_CI95": [
+          0.93028,
+          0.95572
+        ],
+        "mean_posterior_confidence": 0.98184,
+        "mean_posterior_confidence_CI95": [
+          0.97846,
+          0.98523
+        ]
+      },
+      "random": {
+        "confident_single_source_rate": 0.9315,
+        "confident_single_source_rate_CI95": [
+          0.92279,
+          0.94021
+        ],
+        "mean_posterior_confidence": 0.97918,
+        "mean_posterior_confidence_CI95": [
+          0.97711,
+          0.98126
+        ]
+      }
+    }
+  },
+  "warnings": [
+    "Unknown fault and compound conditions are out of the modeled single-hypothesis dictionary.",
+    "Auxiliary faults are invisible at the initially observed two channels.",
+    "Reported intervals summarize independent seeded synthetic replicates, not distribution-free risk guarantees."
+  ],
+  "gate_calibration": {
+    "alpha_nominal": 0.01,
+    "cases": 1800,
+    "thresholds": {
+      "direct": 46.8739697961949,
+      "fixed_best": 60.3903343721243,
+      "random": 60.19826539590889,
+      "dispersion": 59.53833572425788,
+      "class_aware": 59.53833572425788
+    },
+    "note": "Policy-specific 99th percentile thresholds calibrated on separate matched-model synthetic data; no distribution-shift guarantee."
+  },
+  "gate_results": {
+    "matched": {
+      "class_aware": {
+        "rejected_fraction": 0.0155,
+        "accepted_binary_accuracy": 0.99237,
+        "confident_wrong_and_accepted": 0.0075
+      },
+      "direct": {
+        "rejected_fraction": 0.008,
+        "accepted_binary_accuracy": 0.87302,
+        "confident_wrong_and_accepted": 0.013
+      },
+      "dispersion": {
+        "rejected_fraction": 0.0155,
+        "accepted_binary_accuracy": 0.99237,
+        "confident_wrong_and_accepted": 0.0075
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.0105,
+        "accepted_binary_accuracy": 0.9904,
+        "confident_wrong_and_accepted": 0.0085
+      },
+      "random": {
+        "rejected_fraction": 0.012,
+        "accepted_binary_accuracy": 0.97069,
+        "confident_wrong_and_accepted": 0.0105
+      }
+    },
+    "mismatch_mild": {
+      "class_aware": {
+        "rejected_fraction": 0.0165,
+        "accepted_binary_accuracy": 0.99287,
+        "confident_wrong_and_accepted": 0.0065
+      },
+      "direct": {
+        "rejected_fraction": 0.0075,
+        "accepted_binary_accuracy": 0.86689,
+        "confident_wrong_and_accepted": 0.0115
+      },
+      "dispersion": {
+        "rejected_fraction": 0.0165,
+        "accepted_binary_accuracy": 0.99287,
+        "confident_wrong_and_accepted": 0.0065
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.0125,
+        "accepted_binary_accuracy": 0.99188,
+        "confident_wrong_and_accepted": 0.007
+      },
+      "random": {
+        "rejected_fraction": 0.013,
+        "accepted_binary_accuracy": 0.97213,
+        "confident_wrong_and_accepted": 0.0095
+      }
+    },
+    "mismatch_strong": {
+      "class_aware": {
+        "rejected_fraction": 0.0425,
+        "accepted_binary_accuracy": 0.97031,
+        "confident_wrong_and_accepted": 0.0165
+      },
+      "direct": {
+        "rejected_fraction": 0.029,
+        "accepted_binary_accuracy": 0.84284,
+        "confident_wrong_and_accepted": 0.022
+      },
+      "dispersion": {
+        "rejected_fraction": 0.0425,
+        "accepted_binary_accuracy": 0.97031,
+        "confident_wrong_and_accepted": 0.0165
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.0475,
+        "accepted_binary_accuracy": 0.95229,
+        "confident_wrong_and_accepted": 0.0255
+      },
+      "random": {
+        "rejected_fraction": 0.0445,
+        "accepted_binary_accuracy": 0.93886,
+        "confident_wrong_and_accepted": 0.0245
+      }
+    },
+    "higher_noise": {
+      "class_aware": {
+        "rejected_fraction": 0.825,
+        "accepted_binary_accuracy": 0.91443,
+        "confident_wrong_and_accepted": 0.015
+      },
+      "direct": {
+        "rejected_fraction": 0.8745,
+        "accepted_binary_accuracy": 0.80305,
+        "confident_wrong_and_accepted": 0.0085
+      },
+      "dispersion": {
+        "rejected_fraction": 0.825,
+        "accepted_binary_accuracy": 0.91443,
+        "confident_wrong_and_accepted": 0.015
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.817,
+        "accepted_binary_accuracy": 0.91186,
+        "confident_wrong_and_accepted": 0.016
+      },
+      "random": {
+        "rejected_fraction": 0.8185,
+        "accepted_binary_accuracy": 0.9082,
+        "confident_wrong_and_accepted": 0.0155
+      }
+    },
+    "unknown_fault_shape": {
+      "class_aware": {
+        "rejected_fraction": 0.089,
+        "accepted_binary_accuracy": 0.98408,
+        "confident_wrong_and_accepted": 0.013
+      },
+      "direct": {
+        "rejected_fraction": 0.106,
+        "accepted_binary_accuracy": 0.84947,
+        "confident_wrong_and_accepted": 0.012
+      },
+      "dispersion": {
+        "rejected_fraction": 0.089,
+        "accepted_binary_accuracy": 0.98408,
+        "confident_wrong_and_accepted": 0.013
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.08,
+        "accepted_binary_accuracy": 0.98044,
+        "confident_wrong_and_accepted": 0.015
+      },
+      "random": {
+        "rejected_fraction": 0.0825,
+        "accepted_binary_accuracy": 0.95699,
+        "confident_wrong_and_accepted": 0.0165
+      }
+    },
+    "auxiliary_fault": {
+      "class_aware": {
+        "rejected_fraction": 0.2455,
+        "accepted_binary_accuracy": 0.823,
+        "confident_wrong_and_accepted": 0.0155
+      },
+      "direct": {
+        "rejected_fraction": 0.0105,
+        "accepted_binary_accuracy": 0.75492,
+        "confident_wrong_and_accepted": 0.007
+      },
+      "dispersion": {
+        "rejected_fraction": 0.2515,
+        "accepted_binary_accuracy": 0.82093,
+        "confident_wrong_and_accepted": 0.0155
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.009,
+        "accepted_binary_accuracy": 0.77502,
+        "confident_wrong_and_accepted": 0.0095
+      },
+      "random": {
+        "rejected_fraction": 0.093,
+        "accepted_binary_accuracy": 0.7994,
+        "confident_wrong_and_accepted": 0.01
+      }
+    },
+    "compound": {
+      "class_aware": {
+        "rejected_fraction": 0.922
+      },
+      "direct": {
+        "rejected_fraction": 0.5125
+      },
+      "dispersion": {
+        "rejected_fraction": 0.922
+      },
+      "fixed_best": {
+        "rejected_fraction": 0.882
+      },
+      "random": {
+        "rejected_fraction": 0.799
+      }
+    }
+  }
+}

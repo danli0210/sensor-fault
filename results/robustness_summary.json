@@ -1,0 +1,65 @@
+[
+  {
+    "sigma": 0.55,
+    "signature_mismatch": 0.0,
+    "direct": 0.6183,
+    "random_extra": 0.7297,
+    "active_extra": 0.834
+  },
+  {
+    "sigma": 0.55,
+    "signature_mismatch": 0.2,
+    "direct": 0.5903,
+    "random_extra": 0.6943,
+    "active_extra": 0.775
+  },
+  {
+    "sigma": 0.55,
+    "signature_mismatch": 0.4,
+    "direct": 0.655,
+    "random_extra": 0.714,
+    "active_extra": 0.772
+  },
+  {
+    "sigma": 0.85,
+    "signature_mismatch": 0.0,
+    "direct": 0.573,
+    "random_extra": 0.6783,
+    "active_extra": 0.774
+  },
+  {
+    "sigma": 0.85,
+    "signature_mismatch": 0.2,
+    "direct": 0.605,
+    "random_extra": 0.692,
+    "active_extra": 0.778
+  },
+  {
+    "sigma": 0.85,
+    "signature_mismatch": 0.4,
+    "direct": 0.3983,
+    "random_extra": 0.486,
+    "active_extra": 0.5827
+  },
+  {
+    "sigma": 1.2,
+    "signature_mismatch": 0.0,
+    "direct": 0.55,
+    "random_extra": 0.5997,
+    "active_extra": 0.688
+  },
+  {
+    "sigma": 1.2,
+    "signature_mismatch": 0.2,
+    "direct": 0.4863,
+    "random_extra": 0.5833,
+    "active_extra": 0.6777
+  },
+  {
+    "sigma": 1.2,
+    "signature_mismatch": 0.4,
+    "direct": 0.5743,
+    "random_extra": 0.5807,
+    "active_extra": 0.603
+  }
+]
